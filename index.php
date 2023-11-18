@@ -9,6 +9,27 @@ include 'connect.php';
   <title> Responsive Contact Us Form</title>
   <link rel="stylesheet" href="style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .btn-grad {
+      background-image: linear-gradient(to right, #77A1D3 0%, #79CBCA 51%, #77A1D3 100%);
+      margin: 10px;
+      padding: 15px 45px;
+      text-align: center;
+      text-transform: uppercase;
+      transition: 0.5s;
+      background-size: 200% auto;
+      color: white;
+      /* box-shadow: 0 0 20px #eee; */
+      border-radius: 10px;
+      display: block;
+    }
+
+    .btn-grad:hover {
+      background-position: right center;
+      color: #fff;
+      text-decoration: none;
+    }
+  </style>
 </head>
 
 <body>
@@ -31,7 +52,7 @@ include 'connect.php';
           </div>
           <div class="input-box">
             <span class="details">Message</span>
-            <input type="text" placeholder="Enter your password" name="message" required>
+            <input type="text" placeholder="Enter your message" name="message" required>
           </div>
         </div>
         <div class="button">
@@ -39,7 +60,9 @@ include 'connect.php';
         </div>
       </form>
     </div>
-  </div>
+  </div><br>
+  <a href="view_details.php" class="btn-grad">View ALl Messages</a>
+
   <?php
   if (isset($_POST['submit'])) {
     $name = $_POST['name'];
